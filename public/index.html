@@ -183,19 +183,39 @@
 
     <script src="alert.js"></script>
     <script>
-        let company = prompt('Какое "официальное" название JavaScript?', '');
+        //        let company = prompt('Какое "официальное" название JavaScript?', '');
+        //
+        // if (company == 'ECMAScript') {
+        // alert('Верно!');
+        // } else {
+        // alert('Не знаете? ECMAScript!');
+        // }
+        //
+        //
+        //
+        // let isBoss = confirm("Ты здесь главный?");
+        //
+        // alert(isBoss); // true, если нажата OK
 
-        if (company == 'ECMAScript') {
-            alert('Верно!');
+
+        let messageLogin = prompt('Введите логин');
+        if (messageLogin == 'Admin') {
+
+            let password = prompt('Пароль?', '');
+
+            if (password == 'Я главный') {
+                alert('Здравствуйте!');
+            } else if (password == '' || password == null) {
+                alert('Отменено');
+            } else {
+                alert('Неверный пароль');
+            }
+
+        } else if (messageLogin == '' || messageLogin == null) {
+            alert('Отменено');
         } else {
-            alert('Не знаете? ECMAScript!');
+            alert('Я вас не знаю');
         }
-
-
-
-        let isBoss = confirm("Ты здесь главный?");
-
-        alert(isBoss); // true, если нажата OK
 
     </script>
 
